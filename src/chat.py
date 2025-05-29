@@ -1,8 +1,16 @@
 import os
+import sys
+
+try:
+    import pysqlite3
+    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+except ImportError:
+    raise ImportError("pysqlite3 is required to run ChromaDB with the required SQLite version.")
+
 import chromadb
 #from dotenv import load_dotenv
 import google.generativeai as genai
-import os
+
 import streamlit as st
 
 API_KEY = st.secrets["API_KEY"]
