@@ -1,12 +1,17 @@
 import os
 import chromadb
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import google.generativeai as genai
+import os
+import streamlit as st
 
-load_dotenv()
+API_KEY = st.secrets["API_KEY"]
+
+#load_dotenv()
 
 # Configure Gemini
-genai.configure(api_key=os.getenv("API_KEY"))
+#genai.configure(api_key=os.getenv("API_KEY"))
+genai.configure(api_key=API_KEY)
 
 # Setup prompt template
 final_prompt_template = """

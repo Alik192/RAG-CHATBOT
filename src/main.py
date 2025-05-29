@@ -7,15 +7,21 @@ from chromadb.utils.embedding_functions import EmbeddingFunction
 import google.generativeai as genai
 from tqdm import tqdm
 import time 
+import os
+import streamlit as st
+
+API_KEY = st.secrets["API_KEY"]
 
 # --- Load environment ---
-load_dotenv()
-GEMINI_API_KEY = os.getenv("API_KEY") 
+#load_dotenv()
+#GEMINI_API_KEY = os.getenv("API_KEY") 
 
 # --- Set up Gemini Embedding Function for Chroma ---
 class GeminiEmbeddingFunction(EmbeddingFunction):
     def __call__(self, input_texts: list[str]) -> list[list[float]]:
-        genai.configure(api_key=GEMINI_API_KEY)
+        #genai.configure(api_key=GEMINI_API_KEY)
+        genai.configure(api_key=API_KEY)
+
         model = "models/embedding-001"
 
         embeddings = []
