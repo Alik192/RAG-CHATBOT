@@ -1,12 +1,21 @@
-# Python-specific
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+
+# Ignore virtual environments
+venv/
 .env
 
-# Virtual environment folder
-venv/
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
 
-# IDE files
-.vscode/
+# Jupyter Notebooks Checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Streamlit Secrets (optional for deployment)
+.streamlit/secrets.toml
+
+src/chat2.py
