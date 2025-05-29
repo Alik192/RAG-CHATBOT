@@ -4,3 +4,4 @@ python-dotenv
 google-generativeai
 pypdf
 tqdm
+pysqlite3-binary
