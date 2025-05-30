@@ -4,11 +4,11 @@ from chat import process_user_input
 # Configure the page
 st.set_page_config(
     page_title="DocuMate",
-    page_icon="🤖",  # More appealing than 📄
+    page_icon="🤖", 
     layout="centered"
 )
 
-# Handle reset safely
+# Handle reset trigger
 if "reset_triggered" in st.session_state:
     del st.session_state["reset_triggered"]
     st.session_state.clear()

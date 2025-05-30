@@ -56,7 +56,7 @@ Answer:
 """
 
 
-# Initialize ChromaDB collection (assume it already exists and has data)
+# Initialize ChromaDB collection 
 client_chroma = chromadb.PersistentClient(path=os.path.abspath("chroma_db"))
 collection = client_chroma.get_collection(name="my_texts")
 

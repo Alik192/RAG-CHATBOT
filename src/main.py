@@ -9,9 +9,9 @@ from tqdm import tqdm
 import time 
 import os
 import streamlit as st
-
+# api key from streamlit secrets
 API_KEY = st.secrets["API_KEY"]
-
+#those were used when running locally
 # --- Load environment ---
 #load_dotenv()
 #GEMINI_API_KEY = os.getenv("API_KEY") 
